@@ -3,20 +3,23 @@ body{
 	text-decoration: none;
 	font-family: "Lucida Sans Unicode", Tahoma, sans-serif;
 }
-a{
+
+a {
 	color: #000;
 	text-decoration: none;
 }
-.wrapper{
+.wrapper {
 	width: 910px;
 	margin: 0 auto;
 }
 
+.fl { float:left; }
+.fr { float: right; }
 
 /*HEADER*/
 
 
-.phone_numbers{
+.phone_numbers {
 	display: inline-block;
 }
 .phone_numbers > p{
@@ -28,7 +31,7 @@ a{
 	padding: 2px 2px 1px 1px;
 	margin: 5px 3px 1px -1px;
 }
-.phone_numbers::before{
+.phone_numbers::before {
 	content: "";
 	display: inline-block;
 	vertical-align: middle;
@@ -40,8 +43,7 @@ a{
 	margin: 3px 0 -1px 7px;
 }
 
-/******/
-.log_in{
+.log_in {
 	display: inline-block;
 	
 	font-size: 11px;
@@ -64,9 +66,10 @@ form:first-child::before{
 	height: 18px;	
 	margin: 1px 0 -6px 3px;
 }
-.field{
+.field {
 	width: 115px;
 	height: 18px;
+	line-height: 18px;
 	font-size: 11px;
 	color: #97a2a6;
 	border: 1px solid #7b8c96;
@@ -75,6 +78,15 @@ form:first-child::before{
 	padding: 0px 0px 0px 4px;
 	margin: 0 1px 1px 1px;
 	outline: none;
+}
+.field::-webkit-input-placeholder {
+	line-height: 18px;
+}
+.field::-moz-placeholder {
+	line-height: 18px;
+}
+.field:-ms-input-placeholder {
+	line-height: 18px;
 }
 .enter{
 	border: none;
@@ -126,7 +138,7 @@ form:first-child::before{
 	width: 14px;
 	height: 11px;
 	padding: 1px 0 0 2px;
-	margin: 3px 1px 0 0;
+	margin: 5px 1px 0 0;
 } 
 .icon1{
 	background: url("../img/home.png") center no-repeat;
@@ -234,17 +246,15 @@ section{
 	font-size: 14px;
 }
 
-
-.left_column{
-	float: left;
+.aside_column{
 	width: 192px;
 }
-.right_column{
-	float: right;
-	width: 192px;
+
+.aside_column.right{
 	box-sizing:border-box;
 	padding-left: 10px;
 }
+
 .name{
 	width: 180px;
 	box-sizing: border-box;
@@ -285,7 +295,7 @@ section{
 	text-transform: capitalize;
 
 }
-.catalog_sublist_item > a:hover{
+.catalog_sublist_item:hover > a {
 	text-decoration: underline;
 	font-style: italic;
 	font-weight: bold;
@@ -359,7 +369,7 @@ label{
 	text-align: center;
 	text-transform: uppercase;
 	padding: 6px 7px 5px 8px;
-	margin: 12px 24px;
+	margin: 22px 24px;
 	outline: none;
 }
 .submit:hover{
@@ -504,8 +514,8 @@ footer{
 	font-size: 13.2px;
 	color: #bec6c9;
 	text-decoration: none;
-	padding: 0 10px 0 10px;
-	margin: 0 0 0 0;
+	padding: 0 10px;
+	margin: 0;
 }
 .footbar_item > a:hover{
 	color: #52abcb;
