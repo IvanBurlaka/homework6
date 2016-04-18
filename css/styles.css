@@ -13,8 +13,11 @@ a {
 	margin: 0 auto;
 }
 
-.fl { float:left; }
-.fr { float: right; }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
 
 /*HEADER*/
 
@@ -22,7 +25,7 @@ a {
 .phone_numbers {
 	display: inline-block;
 }
-.phone_numbers > p{
+.phone_numbers > p {
 	display: inline-block;
 	font-family: Arial, sans-serif;
 	font-size: 18.5px;
@@ -54,11 +57,12 @@ a {
 	padding: 3px;
 	margin-bottom: 11px;
 }
-.log_in > form{
+
+.login_form {
 	display: inline-block;
 }
 
-form:first-child::before{
+.login_form:first-child::before{
 	content: "";
 	display: inline-block;
 	background: url("../img/shape.png") center no-repeat;
@@ -75,7 +79,7 @@ form:first-child::before{
 	border: 1px solid #7b8c96;
 	border-radius: 3px;
 	box-sizing: border-box;
-	padding: 0px 0px 0px 4px;
+	padding: 0 0 0 4px;
 	margin: 0 1px 1px 1px;
 	outline: none;
 }
@@ -235,12 +239,8 @@ form:first-child::before{
 
 
 /*SECTION*/
-.clearfix::after{
-	content: "";
-	clear: both;
-	display: block;
-}
-section{
+
+.section{
 	margin-top: 15px;
 	font-family:  Tahoma, sans-serif;
 	font-size: 14px;
@@ -249,8 +249,12 @@ section{
 .aside_column{
 	width: 192px;
 }
+.aside_column.left {
+	float: left;
+}
 
 .aside_column.right{
+	float: right;
 	box-sizing:border-box;
 	padding-left: 10px;
 }
