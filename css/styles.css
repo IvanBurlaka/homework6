@@ -358,7 +358,7 @@ a {
 .brand_sublist_item > label, .brand_sublist_item > input, .submit:hover{
 	cursor: pointer;
 }
-label{
+.label{
 	display: inline-block;
 }
 .submit{
@@ -495,7 +495,7 @@ label{
 
 /*FOOTER*/
 
-footer{
+.footer{
 	height: 100px;
 	background: #213a4d;
 	border: 1px solid #242c3e;
